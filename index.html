@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop | Стиль и Борода</title>
+    
+    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
+    <link rel="stylesheet" href="C:\Users\student\Desktop\цыренова 09А48\Барбершоп\style.css\style.css">
+    
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="logo">🪒  BARBER<span>SHOP</span></div>
+        <div class="nav-links">
+            <a href="#services">Услуги</a>
+            <a href="#masters">Мастера</a>
+            <a href="#contacts">Контакты</a>
+            <button id="openModalBtn" class="btn btn-primary nav-btn">Записаться</button>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Твой стиль. Твоя борода. Твои правила.</h1>
+            <p>Стрижки, бороды и королевское бритьё — всё для настоящих мужчин. Запишись онлайн за 1 минуту.</p>
+            <button id="openModalBtnHero" class="btn btn-primary btn-large">Записаться на стрижку</button>
+        </div>
+    </header>
+
+    <!-- Услуги -->
+    <section id="services" class="section">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">✂️ </div>
+                <h3>Мужская стрижка</h3>
+                <p>Классика, фейд или креатив — подберем идеальный образ.</p>
+                <div class="price">1500 ₽</div>
+            </div>
+            <div class="service-card">
+                <div class="icon">🪒 </div>
+                <h3>Стрижка бороды</h3>
+                <p>Оформление, моделирование и уход за вашей бородой.</p>
+                <div class="price">1000 ₽</div>
+            </div>
+            <div class="service-card">
+                <div class="icon">👑 </div>
+                <h3>Королевское бритьё</h3>
+                <p>Горячее полотенце, опасная бритва и максимальный релакс.</p>
+                <div class="price">1800 ₽</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Мастера -->
+    <section id="masters" class="section bg-darker">
+        <h2 class="section-title">Наши мастера</h2>
+        <div class="masters-grid">
+            <div class="master-card">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Александр">
+                <h3>Александр</h3>
+                <span>Топ-барбер</span>
+            </div>
+            <div class="master-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Дмитрий">
+                <h3>Дмитрий</h3>
+                <span>Специалист по бородам</span>
+            </div>
+            <div class="master-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Елена">
+                <h3>Елена</h3>
+                <span>Мастер бритья</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section">
+        <h2 class="section-title">Контакты и ссылки</h2>
+        <div class="contacts-container">
+            <div class="contact-info">
+                <p><strong>Адрес:</strong> г. Улан-Удэ, ул. Ленина, д. 10</p>
+                <p><strong>Телефон:</strong> <a href="tel:+79503859724">+7 (950) 385-97-24</a></p>
+                <p><strong>Время работы:</strong> Ежедневно с 10:00 до 22:00</p>
+                
+                <div class="links-group">
+                    <a href="https://yandex.ru/maps/198/ulan-ude/" target="_blank" class="btn btn-outline">Найти на карте</a>
+
+
+<a href="https://ru.wikipedia.org/wiki/Барбершоп" target="_blank" class="btn btn-outline">Что такое барбершоп?</a>
+                    <a href="https://t.me/jkmhsbd" target="_blank" class="btn btn-secondary">Написать в Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BarberShop. Все права защищены.</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Запись на стрижку</h2>
+            <p>Оставьте заявку, и мы перезвоним вам в течение 5 минут для подтверждения.</p>
+            
+            <form id="bookingForm">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                
+                <select id="service" required>
+                    <option value="" disabled selected>Выберите услугу</option>
+                    <option value="Мужская стрижка">Мужская стрижка (1500 ₽)</option>
+                    <option value="Стрижка бороды">Стрижка бороды (1000 ₽)</option>
+                    <option value="Королевское бритьё">Королевское бритьё (1800 ₽)</option>
+                </select>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ПОДКЛЮЧЕНИЕ ВНЕШНЕГО СКРИПТА -->
+    <script src="C:\Users\student\Desktop\цыренова 09А48\Барбершоп\script.js\script.js"></script>
+</body>
+</html>
